@@ -1,0 +1,117 @@
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_105
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_105
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method BEST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method BEST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 106
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_106
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_106
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method BEST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method BEST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 107
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_107
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 108
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_108
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method BEST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method BEST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 109
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_109
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method BEST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method BEST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 110
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_110
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 111
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_111
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 112
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_112
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 113
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_113
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_113
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method COMPLETE_REQUEST with parameter: {data_request} and {type_request}
+2024-04-07 11:39:20 GMT - INFO -  Exit the method COMPLETE_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5_REQUEST
+2024-04-07 11:39:20 GMT - INFO -  Enter the method WORST5 with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Enter the method STATES_MEAN with parameter Parsed CSV
+2024-04-07 11:39:20 GMT - INFO -  Exit the method STATES_MEAN
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WORST5
+2024-04-07 11:39:20 GMT - INFO - Enter the method WRITE_IN_FILE with parameter Parsed CSV and job_id 114
+2024-04-07 11:39:20 GMT - INFO -  Exit the method WRITE_IN_FILE
+2024-04-07 11:39:20 GMT - INFO -  Enter the method GET_RESPONSE with parameter: job_id_114
+2024-04-07 11:39:20 GMT - INFO -  Exit the method GET_RESPONSE
