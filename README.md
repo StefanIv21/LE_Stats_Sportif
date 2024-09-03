@@ -1,78 +1,69 @@
-================================TEMA 1 ASC==============================
+# Nutrition Statistics Server
+## Purpose
+The goal of this project is to:
+  - Efficiently use synchronization elements studied in the lab.
+  - Implement a concurrent application using a classic client-server problem.
+  - Deepen understanding of Python elements including classes, syntax, threads, synchronization, and using Python modules for threading.
 
-Abordare generala:
-    pentru a memora informatiile utile din CSV am folosit un dictionar in care cheile sunt 
-intrebarile si valorile sunt liste ce contin dictionare formate din numele statelor(cheie)
-si o lita de valori(DATA_VALUES) ce reprezinta values.
-    pentru requesturile care necesitau si categoriile am folosit alt dictionar.Implenetarea este
-aproximativ aceeasi,singura diferneta este ca in loc sa pun numele statului ca si cheie,am pus
-un tuplu de 3 elemente ca si cheie(nume_stat,stratificaton,stratificatonCategory)
-    pentru fiecare request,verific sa vad daca trebuiesc facute calcule si daca da,adaug
-job ul in coada.
-    In treadpool de task_runner, scot cate un job din coada,calculez operatiile cerute si scriu
-rezultatele in fisier.
-    Implementarea este naiva,deoarece nu retin calculele facute,si altfel,pentru fiecare request
-trebuie sa calculez de fiecare data.
-    Tema a fost utila deoarece am aprofundat notiunile noi de pytohn.
+## Implementation
+ A Python server that handles a series of requests based on a dataset in CSV (comma-separated values) format. The server will provide statistics based on the data from the CSV file.
+Dataset
 
-Data_ingestor:
-    am folosit o functie in care verific de care tip trebuie sa fie dicitonarul
-    citesc linie cu linie din CSV si extrag campurile necesare(intrebare,stat,valoare/valori)
-    daca nu gasesc o intrebare in dictionar,o adaug ca si cheie si aloc o lista pentru valori
-    adaug statul la cheia care contine intrebarea de pe linia citita
-    adaug valoarea la statul si la intrebarea corespunzatoare
+The dataset contains information about nutrition, physical activity, and obesity in the United States from 2011 to 2022. The data, collected by the U.S. Department of Health & Human Services, is organized by state (e.g., California, Utah, New York) and addresses the following questions:
 
-MyLogging:
-    am creat un logger pentru a afisa informatiile de la nivelul info
-    am folosit RotatingFileHandler cu maxim 5 fisiere de backup
-    pentru a afisa data si ora in formatul cerut am folosit functia formatTime(m am folosit de CHATGPT)
+    Percent of adults who engage in no leisure-time physical activity
+    Percent of adults aged 18 years and older who have obesity
+    Percent of adults aged 18 years and older who have an overweight classification
+    Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+    Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+    Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+    Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+    Percent of adults who report consuming fruit less than one time daily
+    Percent of adults who report consuming vegetables less than one time daily
 
-Routes:
-    pentru ficare ruta de post m am folosit de o functie ajutatoare pentru a adauga job ul in coada
-            functia "complete_request"
-    pentru fiecare endpoint,notez in log inatrea si iesirea
-    ma folosesc de o lista de dictionare in care notez statusul pentru fiecare job
-    pentru a extrage numarul de job uri ramase,am o variabila in care retin numarul de job uri terminate
+Values used for statistical calculations are in the Data_Value column.
+## Implementation Details
 
-Complete_request:
-    primesc ca si parametri endpointul si datele din request
-    Folosesc o varibila event pentru a vedea daca s a apelat graceful_shutdown
-    in functie de endpointul dat ca paramentru adaug informatiile necesare in coada:
-        trimit id ul,datele din request,tipul de calcul si datele parsate din CSV
-        (trimit doar valorile din dictonar care corespund cu intrebarea aleasa)(data[question])
-    pentru cazurile best sau worst,am luat o lista de intrebari care sunt ,,pe dos,, cu valorile
-si in functie de intrebare pun in coada tipul de calcul(best sau worst)
-    adaug in dictionarul de status id ul job ului si statusul job ului curent
+The server application is multi-threaded. When the server starts, it load the CSV file and extract information to calculate the required statistics. The server model includes:
 
-Threadpool:
-    verific existenta directorului results,iar in caz negativ il creez
-    creez variabilele necesare: coada,event ul de stop,nr de job uri terminate,lista de status
-    creez threadurile TaskRunner si le pornesc
+ - An endpoint (e.g., /api/states_mean) that receives a request and returns a job_id (e.g., “job_id_1”, “job_id_2”, …, “job_id_n”).
+ - An endpoint /api/get_results/job_id that checks if the job_id is valid, whether the result is ready or not, and returns the appropriate response.
 
-TaskRunner:
-    fiecare thread din pool astepata pana exista job uri in coada.Fiecare thread verifica
-tipul taskului si apeleaza functia de calculare a operatiei
-    dupa terminarea functiei de calcul,rezultatul intors este dat ca parametru functiei
-pentru a scrie rezulatul in fisier
-    dupa termniarea de scris in fisier,se marcheaza statusul job ului  cu DONE
-    la unele functii de calcul am folosit CHATGPT
+## Request Mechanics
+  - Associate a job_id with the request.
+  - Put the job (closure encapsulating the unit of work) into a job queue processed by a thread pool.
+  - Increment the internal job_id and return the job_id to the client.
+  - A thread will pick a job from the queue, perform the operation (what was captured by the closure), and write the result to a file named after the job_id in the results/ directory.
 
+## Endpoints implemented
 
-Implementare:
-    intregul enunt al temei este implementat
-    nu am intampinat dificultati
-    lucruri interesnate: lucrul cu thread uri,CSV
+- <b> states_mean: </b> Receives a question and calculates the mean value (Data_Value) for each state, sorted in ascending order.
+- <b> state_mean: </b> Receives a question and a state, and calculates the mean value for the specified state.
+- <b> best5: </b> Receives a question and calculates the mean value for each state, returning the top 5 states.
+- <b> worst5: </b> Receives a question and calculates the mean value for each state, returning the bottom 5 states.
+- <b> global_mean: </b> Receives a question and calculates the global mean value from the entire dataset.
+- <b> diff_from_mean: </b> Receives a question and calculates the difference between the global mean and the state mean for all states.
+- <b> state_diff_from_mean: </b> Receives a question and a state, and calculates the difference between the global mean and the state mean for that state.
+- <b> mean_by_category: </b> Receives a question and calculates the mean value for each segment (Stratification1) within categories (StratificationCategory1) for each state.
+- <b> state_mean_by_category: </b> Receives a question and a state, and calculates the mean value for each segment within categories for that state.
+- <b> graceful_shutdown: </b> Responds to a GET request to notify the thread pool about ending processing. No new requests will be accepted, and the application will shutdown gracefully after processing existing requests.
+- <b> jobs: </b> Responds to a GET request with a JSON listing all JOB_IDs and their statuses.
+- <b> num_jobs: </b> Responds to a GET request with the number of remaining jobs to be processed. After /api/graceful_shutdown, it should return 0, signaling that the Flask server can be stopped.
+- <b> get_results/<job_id>: </b> Responds to a GET request with the result of the job based on the job_id.
 
-Git:
-https://github.com/StefanIv21/LE_Stats_Sportif
+## Server Implementation
 
+The server is implemented using the Flask framework.
 
-        
-        
+Alternatively, use the provided Makefile:
 
+## Run
+```bash
 
-
-    
+make create_venv
+source venv/bin/activate
+make install
+ ```   
 
 
 
